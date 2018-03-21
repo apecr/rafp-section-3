@@ -70,7 +70,7 @@ def get_item_in_store(store_name, item_name):
         store = store[0]
         item = [item for item in store['items'] if item['name'] == item_name]
         if item:
-            return jsonify(item)
+            return jsonify(item[0])
     return jsonify({}), 404
 
 
